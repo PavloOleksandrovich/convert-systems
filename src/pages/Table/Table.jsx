@@ -1,10 +1,7 @@
 import React from 'react';
-import { useTable } from '../../utils';
 import { NavLink } from 'react-router-dom'
 
-function Table({system}) {
-  const table = useTable(system);
-  
+function Table({table}) {
   return (
     <> 
       <NavLink className="btn btn-danger" to="/" style={{margin: '20px 0'}}>

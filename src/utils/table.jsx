@@ -1,7 +1,7 @@
 function useNumbers() {
     return [...Array(10)]
         .map( (_, index) => {
-            return index;
+            return index.toString();
         });
 }
 
