@@ -2,7 +2,7 @@ import React from 'react';
 
 function Separator({onSwapClick, onEqualClick}) {
   return (
-    <div>
+    <div style={{margin: '0 20px'}}>
         <i 
             className="material-icons" 
             onClick={() => onSwapClick()}

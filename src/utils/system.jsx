@@ -36,7 +36,47 @@ function toDecimal(value, system, table) {
     return result;
 }
 
+function addition(firstAddend, secondAddend, system, table) {
+    const decimalFirstAddend = toDecimal(firstAddend, system, table);
+    const decimalSecondAddend = toDecimal(secondAddend, system, table);
+
+    const decimalSum = decimalFirstAddend + decimalSecondAddend;
+
+    return fromDecimal(decimalSum, system, table);
+}
+
+function subtraction(minuend, subtrahend, system, table) {
+    const decimalMinuend = toDecimal(minuend, system, table);
+    const decimalSubtrahend = toDecimal(subtrahend, system, table);
+
+    const decimalDifference = decimalMinuend - decimalSubtrahend;
+
+    return fromDecimal(decimalDifference, system, table);
+}
+
+function multiplication(multiplicand, multiplier, system, table) {
+    const decimalMultiplicand = toDecimal(multiplicand, system, table);
+    const decimalMultiplier = toDecimal(multiplier, system, table);
+
+    const decimalProduct = decimalMultiplicand * decimalMultiplier;
+
+    return fromDecimal(decimalProduct, system, table);
+}
+
+function division(dividend, divisor, system, table) {
+    const decimalDividend = toDecimal(dividend, system, table);
+    const decimalDivisor = toDecimal(divisor, system, table);
+
+    const decimalQuotient = decimalDividend / decimalDivisor;
+
+    return fromDecimal(decimalQuotient, system, table);
+}
+
 export {
     fromDecimal,
-    toDecimal
+    toDecimal,
+    addition,
+    subtraction,
+    multiplication,
+    division
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+
 import { fromDecimal, toDecimal } from '../../../utils';
-import Controller from './Controller/Controller';
+import Controller from '../Controller/Controller';
 import Separator from './Separator/Separator';
 
 function Convert({system, table}) {
