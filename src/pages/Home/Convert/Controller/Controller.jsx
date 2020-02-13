@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Input({badge, value, onChangeValue}) {
+function Controller({badge, value, onChangeValue}) {
   return (
     <div>
         <input 
@@ -15,4 +15,4 @@ function Input({badge, value, onChangeValue}) {
   );
 }
 
-export default Input;
+export default Controller;

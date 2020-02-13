@@ -12,7 +12,7 @@ function Table({table}) {
         <tbody>
           {table.map( (element, index) => (
             <tr key={index}>
-              <td>{index + 1}.</td>
+              <td>{index}.</td>
               <td dangerouslySetInnerHTML={{__html: element}}></td>
             </tr>
           ))};

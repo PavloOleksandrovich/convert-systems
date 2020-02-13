@@ -10,13 +10,13 @@ function fromDecimal(value, system, table) {
     while (subject >= system) {
         const quotient = Math.floor(subject / system);
         const difference = subject - quotient * system;
-        
-        result.push(table[difference - 1]);
+
+        result.push(table[difference]);
 
         subject = quotient;
     }
 
-    result.push(1);
+    result.push(table[subject]);
 
     result.reverse();
     
@@ -26,16 +26,6 @@ function fromDecimal(value, system, table) {
 function toDecimal(value, system, table) {
     let subject = Array.from(value);
     
-    subject = subject.map( (element) => {
-        const isNeedConvert = table.indexOf(element) === -1;
-
-        if (isNeedConvert) {
-            element = `&#${element.charCodeAt(0)};`;
-        }
-
-        return element;
-    });
-
     let result = 0;
 
     for (let i = 0; i < subject.length; i++) {

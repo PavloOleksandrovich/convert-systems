@@ -17,6 +17,7 @@ function App() {
             path="/" 
             render={() => <Home system={system} table={table} />} 
           />
+
           <Route 
             exact 
             path="/table" 

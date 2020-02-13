@@ -18,11 +18,9 @@ function useAlphabet() {
     ];
 }
 
-
-
 function useHtmlEntityUnicode(amount) {
     return [...Array(amount)]
-        .map( (_, index) => ('&#' + (index + 300) + ';') );
+        .map( (_, index) => (String.fromCharCode(index + 300)) );
 }
 
 function useTable(amount) {
