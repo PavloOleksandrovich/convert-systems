@@ -39,7 +39,7 @@ function Table({table}) {
                 </Fragment>
               ))}
             </tr>
-          ))};
+          ))}
         </tbody>
       </table>
     </>
